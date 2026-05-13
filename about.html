@@ -113,46 +113,217 @@
             style="color: #12423F; font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px;">View
             Certifications & Legacy</a>
         </div>
-        <div class="fade-up" style="transition-delay: 0.1s; position: relative;">
-          <!-- Using a subtle background square to offset the image slightly -->
-          <div
-            style="position: absolute; inset: -16px 16px 16px -16px; background: rgba(255,255,255,0.4); border-radius: var(--radius-sm); z-index: 0;">
-          </div>
-          <img src="images/clinic-photo-4.png" alt="Runu Garg — Certified Neurotherapist"
-            style="width: 100%; border-radius: var(--radius-sm); position: relative; z-index: 1; box-shadow: var(--shadow-md);" />
+        <div class="fade-up" style="transition-delay: 0.1s; position: relative; padding: 0 16px 16px 0;">
+          <!-- Teal shadow block offset behind the image -->
+          <div style="
+            position: absolute;
+            inset: 16px 0 0 16px;
+            background: var(--primary);
+            opacity: 0.18;
+            border-radius: var(--radius-sm);
+            z-index: 0;
+            filter: blur(2px);
+          "></div>
+          <!-- Second deeper layer for depth -->
+          <div style="
+            position: absolute;
+            inset: 8px 0 0 8px;
+            background: var(--teal-mid);
+            opacity: 0.12;
+            border-radius: var(--radius-sm);
+            z-index: 0;
+          "></div>
+          <img src="images/doc imagee 1.jpg" alt="Runu Garg — Certified Neurotherapist"
+            style="width: 100%; border-radius: var(--radius-sm); position: relative; z-index: 1; box-shadow: 0 20px 60px rgba(18, 66, 63, 0.22), 0 4px 16px rgba(0,0,0,0.10);" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="gallery-section" style="padding: 100px 0;">
-    <div style="max-width: 1000px; margin: 0 auto; padding: 0 40px; text-align: center; margin-bottom: 48px;">
-      <div class="label"
-        style="font-size: 20px; background: transparent; border: none; letter-spacing: 0.12em; color: var(--gold-dark); font-weight: 600; margin-bottom: 16px; padding: 0; text-transform: uppercase;">
-        THE SPACE
-      </div>
-      <h2 style="font-size: 40px; font-weight: 400; color: #12423F; margin-bottom: 16px;">The Clinical Sanctuary</h2>
-      <p style="font-size: 16px; color: var(--text-sec); font-family: 'Noto Serif', serif; font-style: italic;">
-        A calm, professional environment designed<br>for healing and recovery.
-      </p>
+  <!-- MARQUEE GALLERY — replaces Clinical Sanctuary -->
+  <section class="marquee-gallery">
+    <div class="marquee-gallery__header fade-up">
+      <span class="label label--light" style="font-size:14px; letter-spacing:0.14em;">The Space</span>
+      <h2 class="marquee-gallery__heading">The Clinical Sanctuary</h2>
+      <p class="marquee-gallery__sub">A calm, professional environment designed for healing and recovery</p>
     </div>
-    <div class="gallery-grid fade-up"
-      style="max-width: 1000px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px;">
-      <div style="display: flex; flex-direction: column; gap: 20px;">
-        <img src="images/clinic-photo-2.png" alt="Clinic space"
-          style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm);" />
-        <img src="images/practitioner.png" alt="Treatment"
-          style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm);" />
+
+    <div class="marquee-gallery__stage">
+
+      <!-- Row 1 — scrolls left -->
+      <div class="marquee-track">
+        <div class="marquee-inner">
+          <div class="mg-card mg-card--img" style="background-image:url('images/clinic-photo-2.png')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Healing Environment</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#00201E 0%,#12423F 55%,#2D5A56 100%)">
+            <div class="mg-card__glow"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Nerve Restoration</span>
+              <p class="mg-card__caption">Reconnecting your body's innate intelligence</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/practitioner.png')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Mindful Treatment</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#2a1800 0%,#775A19 60%,#c49328 100%)">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 60% 35%,rgba(254,212,136,0.28) 0%,transparent 65%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Hormonal Balance</span>
+              <p class="mg-card__caption">Recalibrating your endocrine system</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/clinic-photo-3.png')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Award-Winning Care</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#071a19 0%,#134E4A 60%,#1a6b65 100%)">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 30% 70%,rgba(188,236,230,0.18) 0%,transparent 60%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Cellular Recovery</span>
+              <p class="mg-card__caption">Deep regeneration through neural signalling</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/doc imagee 1.jpg')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Expert Practitioner</span></div>
+          </div>
+          <!-- Duplicates for seamless loop -->
+          <div class="mg-card mg-card--img" style="background-image:url('images/clinic-photo-2.png')"
+            aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Healing Environment</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#00201E 0%,#12423F 55%,#2D5A56 100%)" aria-hidden="true">
+            <div class="mg-card__glow"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Nerve Restoration</span>
+              <p class="mg-card__caption">Reconnecting your body's innate intelligence</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/practitioner.png')" aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Mindful Treatment</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#2a1800 0%,#775A19 60%,#c49328 100%)" aria-hidden="true">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 60% 35%,rgba(254,212,136,0.28) 0%,transparent 65%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Hormonal Balance</span>
+              <p class="mg-card__caption">Recalibrating your endocrine system</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/clinic-photo-3.png')"
+            aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Award-Winning Care</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#071a19 0%,#134E4A 60%,#1a6b65 100%)" aria-hidden="true">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 30% 70%,rgba(188,236,230,0.18) 0%,transparent 60%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Cellular Recovery</span>
+              <p class="mg-card__caption">Deep regeneration through neural signalling</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/doc imagee 1.jpg')" aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Expert Practitioner</span></div>
+          </div>
+        </div>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 20px;">
-        <img src="images/clinic-photo-3.png " alt="Award"
-          style="width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm);" />
-        <img src="images/clinic-photo-4.png" alt="Runu Garg"
-          style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm);" />
+
+      <!-- Row 2 — scrolls right -->
+      <div class="marquee-track">
+        <div class="marquee-inner marquee-inner--right">
+          <div class="mg-card mg-card--img" style="background-image:url('images/clinic-photo.png')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">The Clinic</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#0d1f3c 0%,#1a3a6b 55%,#12423F 100%)">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 40% 55%,rgba(161,207,202,0.22) 0%,transparent 65%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Brainwave Harmony</span>
+              <p class="mg-card__caption">Alpha wave states for deep healing</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/about-hero.png')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Ancient Wisdom</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#12423F 0%,#1a6b65 55%,#A1CFCA 100%)">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 55% 45%,rgba(188,236,230,0.2) 0%,transparent 65%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Emotional Balance</span>
+              <p class="mg-card__caption">Restoring the mind-body equilibrium</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/neurotherapy-session.png')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Precision Therapy</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#1a0800 0%,#4a1500 55%,#8B3A00 100%)">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 65% 30%,rgba(254,212,136,0.18) 0%,transparent 60%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Nervous System Reset</span>
+              <p class="mg-card__caption">Releasing chronic tension patterns</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/hero-session.jpeg')">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Neural Activation</span></div>
+          </div>
+          <!-- Duplicates -->
+          <div class="mg-card mg-card--img" style="background-image:url('images/clinic-photo.png')" aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">The Clinic</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#0d1f3c 0%,#1a3a6b 55%,#12423F 100%)" aria-hidden="true">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 40% 55%,rgba(161,207,202,0.22) 0%,transparent 65%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Brainwave Harmony</span>
+              <p class="mg-card__caption">Alpha wave states for deep healing</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/about-hero.png')" aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Ancient Wisdom</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#12423F 0%,#1a6b65 55%,#A1CFCA 100%)" aria-hidden="true">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 55% 45%,rgba(188,236,230,0.2) 0%,transparent 65%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Emotional Balance</span>
+              <p class="mg-card__caption">Restoring the mind-body equilibrium</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/neurotherapy-session.png')"
+            aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Precision Therapy</span></div>
+          </div>
+          <div class="mg-card mg-card--grad"
+            style="background:linear-gradient(135deg,#1a0800 0%,#4a1500 55%,#8B3A00 100%)" aria-hidden="true">
+            <div class="mg-card__glow"
+              style="background:radial-gradient(circle at 65% 30%,rgba(254,212,136,0.18) 0%,transparent 60%)"></div>
+            <div class="mg-card__overlay">
+              <span class="mg-card__tag">Nervous System Reset</span>
+              <p class="mg-card__caption">Releasing chronic tension patterns</p>
+            </div>
+          </div>
+          <div class="mg-card mg-card--img" style="background-image:url('images/hero-session.jpeg')" aria-hidden="true">
+            <div class="mg-card__overlay"><span class="mg-card__tag">Neural Activation</span></div>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
+
 
   <!-- OUR APPROACH -->
   <section class="approach-section" style="padding: 80px 0 100px; background: var(--cream);">
@@ -236,7 +407,10 @@
   <footer class="footer">
     <div class="footer__grid">
       <div>
-        <p class="footer__desc" style="margin-top: 40px;">
+        <div class="footer__logo">
+          <img src="images/logo.png" alt="Neuroveda" />
+        </div>
+        <p class="footer__desc">
           Pioneering non-invasive health restoration. Using certified LMNT techniques to awaken your body's innate
           healing potential.
         </p>
@@ -265,7 +439,14 @@
       <div>
         <div class="footer__col-title">Connect</div>
         <p class="footer__address">Call us to book your free session:</p>
-        <div class="footer__phone">9910410222</div>
+        <a href="tel:9910410222" class="footer__phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81a19.79 19.79 0 0 1-3.07-8.66A2 2 0 0 1 2 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16z" />
+          </svg>
+          9910410222
+        </a>
         <div class="footer__social">
           <a href="https://www.instagram.com/neuroveda.life" aria-label="Instagram">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
