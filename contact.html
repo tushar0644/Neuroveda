@@ -35,14 +35,17 @@
 
   <!-- BOOKING HERO -->
   <section class="booking-hero">
-    <div class="booking-hero__inner">
-      <div class="label booking-hero__label fade-up">
+    <div class="booking-hero__inner" style="text-align: left;">
+      <div class="label fade-up"
+        style="font-size: 18px; background: transparent; border: none; letter-spacing: 0.08em; color: var(--gold-dark); font-weight: 600; margin-bottom: 20px; padding: 0; text-transform: uppercase;">
         INITIAL CONSULTATION
       </div>
-      <h1 class="booking-hero__heading fade-up">
+      <h1 class="page-hero__heading fade-up"
+        style="font-size: 40px; font-weight: 500; color: #12423F; margin-bottom: 24px; line-height: 1.3;">
         Your first step costs nothing.<br>And it could change everything.
       </h1>
-      <p class="booking-hero__body fade-up">
+      <p class="page-hero__body fade-up"
+        style="max-width: 640px; font-size: 15px; color: var(--text-sec); line-height: 1.6; font-family: 'Noto Serif', serif; transition-delay:0.1s;">
         Schedule a complimentary introductory consultation with Runu Garg to explore your path toward neurological
         optimization and restored clarity.
       </p>
@@ -54,11 +57,14 @@
     <div class="booking-bento__grid">
 
       <!-- Main CTA card -->
-      <div class="booking-card booking-card--dark fade-up">
-        <div class="booking-card__glow"></div>
-        <div class="booking-card__content">
-          <h2 class="booking-card__heading">Instant Booking</h2>
-          <p class="booking-card__body">
+      <div class="booking-card booking-card--dark fade-up"
+        style="background:var(--dark); grid-column:1; position:relative; overflow:hidden; min-height:280px;">
+        <div
+          style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%, rgba(161,207,202,0.12) 0%, transparent 65%);pointer-events:none;">
+        </div>
+        <div style="position:relative;z-index:1;">
+          <h2 class="booking-card__heading" style="font-size:32px;">Instant Booking</h2>
+          <p class="booking-card__body" style="max-width:480px;">
             Speak directly with our care coordinator to secure your slot or request immediate assistance for your
             neurological health concerns.
           </p>
@@ -82,13 +88,16 @@
       </div>
 
       <!-- Clinic details card -->
-      <div class="booking-card booking-card--clinic fade-up">
+      <div class="booking-card booking-card--clinic fade-up"
+        style="transition-delay:0.1s; grid-column:2; grid-row:span 2;">
         <img src="images/clinic-photo.png" alt="Neuroveda clinic" class="booking-card__clinic-image" />
         <h2 class="booking-card__heading">The Clinic</h2>
-        <p class="booking-card__address">
+        <p
+          style="font-size:15px; color:rgba(255,255,255,0.75); font-family:'Noto Serif',serif; line-height:1.6; margin-bottom:8px;">
           JP-76, Ground Floor, Maurya Enclave,<br>Pitampura, Delhi – 110088
         </p>
-        <a href="https://maps.google.com/?q=Neuroveda+Pitampura+Delhi" target="_blank" class="clinic__map-link">
+        <a href="https://maps.google.com/?q=Neuroveda+Pitampura+Delhi" target="_blank" class="clinic__map-link"
+          style="margin-bottom:20px;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
             <circle cx="12" cy="10" r="3" />
@@ -96,22 +105,25 @@
           Open in Google Maps
         </a>
         <hr class="booking-card__clinic-divider" />
-        <div class="booking-card__clinic-info">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(161,207,202,0.8)" stroke-width="2">
             <circle cx="12" cy="12" r="10" />
             <polyline points="12 6 12 12 16 14" />
           </svg>
-          <span class="booking-card__clinic-label">Hours</span>
+          <span
+            style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-light);font-family:'Inter',sans-serif;">Hours</span>
         </div>
         <div class="booking-card__clinic-time">11 AM – 2 PM</div>
-        <div class="booking-card__clinic-time booking-card__clinic-time--mt">6 PM – 8 PM</div>
+        <div class="booking-card__clinic-time" style="margin-top:4px;">6 PM – 8 PM</div>
       </div>
 
       <!-- Home visits card -->
-      <div class="booking-card booking-card--home-visit fade-up">
-        <div class="booking-card__bg-image"></div>
-        <div class="booking-card__content">
-          <h2 class="booking-card__heading">Home Visits</h2>
+      <div class="booking-card fade-up"
+        style="transition-delay:0.2s; position:relative; overflow:hidden; grid-column:1;">
+        <img src="images/neurotherapy-session.png" alt=""
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.07;border-radius:var(--radius-sm);" />
+        <div style="position:relative;z-index:1;">
+          <h2 class="booking-card__heading" style="color:var(--primary);">Home Visits</h2>
           <p class="booking-card__body">
             Personalized neuro-therapy in the comfort of your residence for patients with mobility constraints or
             specific recovery needs. Available within 3 km of the clinic.
@@ -126,17 +138,20 @@
     <div class="support-cards-grid">
 
       <!-- Home Visits card -->
-      <div class="booking-card support-card fade-up">
-        <div class="support-card__icon-box support-card__icon-box--gold">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      <div class="booking-card fade-up"
+        style="background:#fff; border:1px solid #EBEBEB; border-radius:12px; display:flex; flex-direction:row; align-items:flex-start; gap:20px; padding:32px; box-shadow:none;">
+        <div
+          style="flex-shrink:0; width:44px; height:44px; background:#FFF5EA; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5832A" stroke-width="1.8"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
         </div>
-        <div class="support-card__content">
-          <h3 class="support-card__title">Home Visits</h3>
-          <p class="support-card__body">
+        <div>
+          <h3 style="font-size:17px;font-weight:600;color:#12423F;font-family:'Inter',sans-serif;margin-bottom:10px;">
+            Home Visits</h3>
+          <p style="font-size:14px;color:#666;font-family:'Noto Serif',serif;line-height:1.7;margin:0;">
             Personalized neuro-therapy in the comfort of your residence for patients with mobility constraints or
             specific recovery needs.
           </p>
@@ -144,18 +159,21 @@
       </div>
 
       <!-- Walk-in Support card -->
-      <div class="booking-card support-card fade-up">
-        <div class="support-card__icon-box support-card__icon-box--teal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      <div class="booking-card fade-up"
+        style="background:#fff; border:1px solid #EBEBEB; border-radius:12px; display:flex; flex-direction:row; align-items:flex-start; gap:20px; padding:32px; box-shadow:none; transition-delay:0.1s;">
+        <div
+          style="flex-shrink:0; width:44px; height:44px; background:#EAF4F3; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12423F" stroke-width="1.8"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="5" r="1.5" />
             <path d="M8 21l2-6 2 2 2-4 2 8" />
             <path d="M7 11.5c1.5-2 3.5-3 5-3s3 1 3 1" />
           </svg>
         </div>
-        <div class="support-card__content">
-          <h3 class="support-card__title">Walk-in Support</h3>
-          <p class="support-card__body">
+        <div>
+          <h3 style="font-size:17px;font-weight:600;color:#12423F;font-family:'Inter',sans-serif;margin-bottom:10px;">
+            Walk-in Support</h3>
+          <p style="font-size:14px;color:#666;font-family:'Noto Serif',serif;line-height:1.7;margin:0;">
             Our facility is designed for easy access. While we recommend booking, walk-in inquiries are welcomed during
             clinic hours for triage.
           </p>
@@ -170,13 +188,18 @@
     <div class="prep-section__inner">
 
       <!-- Left: What to Bring -->
-      <div class="prep-section__content fade-up">
-        <div class="label label--gold prep-section__label">PREPARATION</div>
-        <h2 class="prep-section__heading">What to Bring</h2>
+      <div class="fade-up">
+        <div
+          style="font-size: 16px; font-weight: 700; letter-spacing: 0.1em; color: var(--gold-dark); text-transform: uppercase; margin-bottom: 14px; font-family: 'Inter', sans-serif;">
+          PREPARATION</div>
+        <h2 style="font-size: 36px; font-weight: 400; color: #12423F; margin-bottom: 40px; line-height: 1.2;">What to
+          Bring</h2>
 
-        <div class="prep-item">
-          <div class="prep-item__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        <!-- Item 1 -->
+        <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 28px;">
+          <div
+            style="flex-shrink: 0; width: 40px; height: 40px; background: #EEF2F1; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12423F" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
               <polyline points="14 2 14 8 20 8" />
@@ -185,12 +208,15 @@
               <polyline points="10 9 9 9 8 9" />
             </svg>
           </div>
-          <span class="prep-item__text">Comprehensive Medical Reports</span>
+          <span style="font-size: 16px; color: #333; font-family: 'Inter', sans-serif;">Comprehensive Medical
+            Reports</span>
         </div>
 
-        <div class="prep-item">
-          <div class="prep-item__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        <!-- Item 2 -->
+        <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 28px;">
+          <div
+            style="flex-shrink: 0; width: 40px; height: 40px; background: #EEF2F1; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12423F" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" />
               <line x1="3" y1="9" x2="21" y2="9" />
@@ -199,35 +225,47 @@
               <line x1="15" y1="9" x2="15" y2="21" />
             </svg>
           </div>
-          <span class="prep-item__text">List of Current Medications</span>
+          <span style="font-size: 16px; color: #333; font-family: 'Inter', sans-serif;">List of Current
+            Medications</span>
         </div>
 
-        <div class="prep-item">
-          <div class="prep-item__icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        <!-- Item 3 -->
+        <div style="display: flex; align-items: center; gap: 18px;">
+          <div
+            style="flex-shrink: 0; width: 40px; height: 40px; background: #EEF2F1; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12423F" stroke-width="1.8"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 20h9" />
               <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
             </svg>
           </div>
-          <span class="prep-item__text">Previous Neuro-Assessment History</span>
+          <span style="font-size: 16px; color: #333; font-family: 'Inter', sans-serif;">Previous Neuro-Assessment
+            History</span>
         </div>
       </div>
 
       <!-- Right: Map in phone frame style -->
-      <div class="prep-section__map fade-up">
-        <div class="map-container">
-          <div class="map-iframe-wrap">
+      <div class="fade-up" style="transition-delay: 0.15s; position: relative;">
+        <div
+          style="border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); position: relative; background: #e8e8e8;">
+          <!-- Map iframe with greyscale filter -->
+          <div style="position: relative; height: 340px; overflow: hidden;">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.536574028879!2d77.12804!3d28.6970!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMaurya+Enclave+Pitampura+Delhi!5e0!3m2!1sen!2sin!4v1620000000000"
-              width="100%" height="360" frameborder="0" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade" title="Neuroveda Clinic Location">
+              width="100%" height="360"
+              style="border: 0; display: block; filter: grayscale(100%) contrast(0.85); margin-top: -10px;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Neuroveda Clinic Location">
             </iframe>
           </div>
 
-          <div class="map-info">
-            <div class="map-info__label">LOCATION MAP</div>
-            <div class="map-info__text">Maurya Enclave, Pitampura</div>
+          <!-- Location card overlay -->
+          <div style="background: #fff; padding: 18px 24px; border-top: 1px solid #eee;">
+            <div
+              style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: #888; text-transform: uppercase; font-family: 'Inter', sans-serif; margin-bottom: 6px;">
+              LOCATION MAP</div>
+            <div style="font-size: 16px; font-weight: 500; color: #12423F; font-family: 'Inter', sans-serif;">Maurya
+              Enclave, Pitampura</div>
           </div>
         </div>
       </div>
