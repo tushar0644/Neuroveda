@@ -184,3 +184,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ---- Mobile Step Scroll Trigger ----
+const stepCards = document.querySelectorAll('.step-card');
+if (stepCards.length > 0) {
+  const stepObserverOptions = {
+    // Trigger when 60% of the card is in view
+    threshold: 0.6,
+    // Slightly adjust the trigger zone
+    rootMargin: '0px 0px -10% 0px'
+  };
+
+  const stepObserver = new IntersectionObserver((entries) => {
+    // Only run logic on mobile screens
+    if (window.innerWidth > 768) return;
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, stepObserverOptions);
+
+  stepCards.forEach(card => stepObserver.observe(card));
+}

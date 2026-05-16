@@ -936,9 +936,16 @@ h6 {
   border-bottom: none;
 }
 
+.lineage__feature-icon svg,
+.lineage__feature-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .lineage__feature-icon {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   background: rgba(18, 66, 63, 0.08);
   border-radius: 50%;
@@ -2672,8 +2679,8 @@ h6 {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 35%, rgba(0, 20, 18, 0.82) 100%);
-  border-radius: 28px;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 20, 18, 0.88) 100%);
+  border-radius: inherit;
 }
 
 /* Ambient glow layer on gradient cards */
@@ -2690,11 +2697,11 @@ h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 22px 20px;
+  padding: 20px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
 }
 
 /* Glassmorphism pill tag */
@@ -3078,11 +3085,73 @@ h6 {
   }
 
   .mg-card {
-    width: 200px;
-    height: 252px;
-    border-radius: 18px;
+    width: 180px;
+    height: 240px;
+    border-radius: 16px;
   }
 
+  .mg-card__overlay {
+    padding: 12px;
+  }
+
+  .mg-card__tag {
+    font-size: 8px;
+    padding: 4px 10px;
+  }
+
+  /* STEP CARD MOBILE-ONLY ANIMATION */
+  .step-card.fade-up {
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .step-card.fade-up.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .step-card.visible .step-card__icon {
+    animation: mobileIconBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    animation-delay: 0.2s;
+  }
+
+  .step-card.visible .step-card__title {
+    animation: mobileTextSlide 0.5s ease-out backwards;
+    animation-delay: 0.3s;
+  }
+
+  .step-card.visible .step-card__body {
+    animation: mobileTextSlide 0.5s ease-out backwards;
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes mobileIconBounce {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes mobileTextSlide {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
   .marquee-inner {
     gap: 14px;
   }
@@ -3099,5 +3168,38 @@ h6 {
   .services-hero {
     padding-top: 48px !important;
     padding-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-card {
+    --active-text: var(--text-light);
+    --active-body: rgba(255, 255, 255, 0.75);
+    --active-icon-bg: rgba(255, 255, 255, 0.15);
+  }
+
+  .step-card:nth-child(1) {
+    --active-text: var(--gold-dark);
+    --active-body: rgba(119, 90, 25, 0.85);
+    --active-icon-bg: rgba(119, 90, 25, 0.12);
+  }
+
+  /* Fill layer state when active (triggered via scroll in JS) */
+  .step-card::before {
+    transform: scaleY(0);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform-origin: bottom;
+  }
+
+  .step-card.active::before {
+    transform: scaleY(1);
+  }
+
+  /* Text/Icon states when active */
+  .step-card.active .step-card__title { color: var(--active-text) !important; }
+  .step-card.active .step-card__body { color: var(--active-body) !important; }
+  .step-card.active .step-card__icon { 
+    background: var(--active-icon-bg) !important; 
+    color: var(--active-text) !important; 
   }
 }
