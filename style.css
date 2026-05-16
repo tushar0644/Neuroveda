@@ -2693,16 +2693,9 @@ h6 {
 
 /* Tag + caption container */
 .mg-card__overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: none;
 }
+
 
 /* Glassmorphism pill tag */
 .mg-card__tag {
