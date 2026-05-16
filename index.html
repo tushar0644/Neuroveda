@@ -391,57 +391,103 @@
         our patients through their
         own words.</p>
     </div>
-    <div class="video-testimonials__grid">
-      <div class="video-card fade-up" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        <div class="video-card__thumb">
-          <img src="images/video-thumb-1.png" alt="Patient testimonial video" />
-          <div class="video-card__play">
-            <div class="video-card__play-btn">
-              <svg viewBox="0 0 24 24">
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
+    <div class="video-testimonials__slider-container fade-up">
+      <button class="slider-btn slider-btn--prev" id="videoPrev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+
+      <div class="video-testimonials__slider" id="videoSlider">
+        <div class="video-testimonials__grid">
+          <div class="video-card" onclick="openVideoModal('https://player.vimeo.com/video/1192773597?h=90347af6d4')">
+            <div class="video-card__thumb">
+              <img src="images/video-thumb-1.png" alt="Patient testimonial video" />
+              <div class="video-card__play">
+                <div class="video-card__play-btn">
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__name">Aditi Varma</div>
+              <div class="video-card__tag">Chronic Pain Recovery</div>
+            </div>
+          </div>
+          <div class="video-card" onclick="openVideoModal('https://player.vimeo.com/video/1192773683?h=c484dd7766')">
+            <div class="video-card__thumb">
+              <img src="images/video-thumb-2.png" alt="Patient testimonial video" />
+              <div class="video-card__play">
+                <div class="video-card__play-btn">
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__name">Rajesh Khanna</div>
+              <div class="video-card__tag">Diabetes Management</div>
+            </div>
+          </div>
+          <div class="video-card" onclick="openVideoModal('https://player.vimeo.com/video/1192773806?h=5834a62c98')">
+            <div class="video-card__thumb">
+              <img src="images/video-thumb-3.png" alt="Patient testimonial video" />
+              <div class="video-card__play">
+                <div class="video-card__play-btn">
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__name">Dr. S. Mehra</div>
+              <div class="video-card__tag">Medical Perspective</div>
+            </div>
+          </div>
+          <div class="video-card" onclick="openVideoModal('https://player.vimeo.com/video/1192773893?h=b16439d302')">
+            <div class="video-card__thumb">
+              <img src="images/video-thumb-4.png" alt="Patient testimonial video" />
+              <div class="video-card__play">
+                <div class="video-card__play-btn">
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__name">Manish Kapoor</div>
+              <div class="video-card__tag">Cervical Pain Relief</div>
+            </div>
+          </div>
+          <div class="video-card" onclick="openVideoModal('https://player.vimeo.com/video/1192774029?h=a8362ef17e')">
+            <div class="video-card__thumb">
+              <img src="images/video-thumb-5.png" alt="Patient testimonial video" />
+              <div class="video-card__play">
+                <div class="video-card__play-btn">
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <div class="video-card__name">Sneha Reddy</div>
+              <div class="video-card__tag">Digestive Health Success</div>
             </div>
           </div>
         </div>
-        <div class="video-card__info">
-          <div class="video-card__name">Aditi Varma</div>
-          <div class="video-card__tag">Chronic Pain Recovery</div>
-        </div>
       </div>
-      <div class="video-card fade-up" style="transition-delay:0.1s;"
-        onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        <div class="video-card__thumb">
-          <img src="images/video-thumb-2.png" alt="Patient testimonial video" />
-          <div class="video-card__play">
-            <div class="video-card__play-btn">
-              <svg viewBox="0 0 24 24">
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="video-card__info">
-          <div class="video-card__name">Rajesh Khanna</div>
-          <div class="video-card__tag">Diabetes Management</div>
-        </div>
-      </div>
-      <div class="video-card fade-up" style="transition-delay:0.2s;"
-        onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        <div class="video-card__thumb">
-          <img src="images/video-thumb-3.png" alt="Patient testimonial video" />
-          <div class="video-card__play">
-            <div class="video-card__play-btn">
-              <svg viewBox="0 0 24 24">
-                <polygon points="5 3 19 12 5 21 5 3" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="video-card__info">
-          <div class="video-card__name">Dr. S. Mehra</div>
-          <div class="video-card__tag">Medical Perspective</div>
-        </div>
-      </div>
+
+      <button class="slider-btn slider-btn--next" id="videoNext" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
     </div>
   </section>
 

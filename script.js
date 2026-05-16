@@ -113,6 +113,67 @@ if (navEl) {
   }, { passive: true });
 }
 
+// ---- Video slider logic ----
+const videoSlider = document.getElementById('videoSlider');
+const videoGrid = videoSlider ? videoSlider.querySelector('.video-testimonials__grid') : null;
+const prevBtn = document.getElementById('videoPrev');
+const nextBtn = document.getElementById('videoNext');
+
+if (videoSlider && videoGrid && prevBtn && nextBtn) {
+  let currentIndex = 0;
+  const cards = videoGrid.querySelectorAll('.video-card');
+  const totalCards = cards.length;
+
+  function getCardsPerView() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
+  function updateSlider() {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+    
+    // Ensure currentIndex is within bounds
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    
+    const cardWidth = cards[0].offsetWidth;
+    const gap = window.innerWidth <= 768 ? 16 : 24; 
+    const moveDistance = currentIndex * (cardWidth + gap);
+    
+    videoGrid.style.transform = `translateX(-${moveDistance}px)`;
+    
+    // Update button states
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const cardsPerView = getCardsPerView();
+    if (currentIndex < totalCards - cardsPerView) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  // Handle resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateSlider, 250);
+  });
+
+  // Initial update
+  updateSlider();
+}
+
 // ---- Smooth scroll for anchor links ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {

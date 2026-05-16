@@ -1202,13 +1202,22 @@ h6 {
   font-family: 'Noto Serif', serif;
 }
 
-.video-testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.video-testimonials__slider-container {
+  position: relative;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 80px;
+}
+
+.video-testimonials__slider {
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.video-testimonials__grid {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .video-card {
@@ -1219,6 +1228,52 @@ h6 {
   box-shadow: var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  flex: 0 0 calc(33.333% - 16px);
+  min-width: 300px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--text-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-lt);
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.slider-btn:hover {
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.slider-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--gray-lt);
+  color: var(--text-muted);
+}
+
+.slider-btn--prev {
+  left: 16px;
+}
+
+.slider-btn--next {
+  right: 16px;
+}
+
+.slider-btn svg {
+  width: 24px;
+  height: 24px;
 }
 
 .video-card:hover {
@@ -2361,6 +2416,34 @@ h6 {
     gap: 10px;
     text-align: center;
   }
+
+  /* VIDEO TESTIMONIALS */
+  .video-testimonials__slider-container {
+    padding: 0 20px !important;
+  }
+
+  .video-testimonials__grid {
+    padding: 0 !important;
+    gap: 16px !important;
+  }
+
+  .video-card {
+    flex: 0 0 100% !important;
+    min-width: auto !important;
+  }
+
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slider-btn--prev {
+    left: 4px;
+  }
+
+  .slider-btn--next {
+    right: 4px;
+  }
 }
 
 
@@ -3007,6 +3090,7 @@ h6 {
 
 /* Global Hero padding overrides for mobile */
 @media (max-width: 768px) {
+
   .hero,
   .about-hero-section,
   .booking-hero,
