@@ -2462,7 +2462,7 @@ h6 {
   }
 
   .page-hero__heading {
-    font-size: 26px !important;
+    font-size: 22px !important;
   }
 
   .label {
@@ -3196,10 +3196,16 @@ h6 {
   }
 
   /* Text/Icon states when active */
-  .step-card.active .step-card__title { color: var(--active-text) !important; }
-  .step-card.active .step-card__body { color: var(--active-body) !important; }
-  .step-card.active .step-card__icon { 
-    background: var(--active-icon-bg) !important; 
-    color: var(--active-text) !important; 
+  .step-card.active .step-card__title {
+    color: var(--active-text) !important;
+  }
+
+  .step-card.active .step-card__body {
+    color: var(--active-body) !important;
+  }
+
+  .step-card.active .step-card__icon {
+    background: var(--active-icon-bg) !important;
+    color: var(--active-text) !important;
   }
 }
