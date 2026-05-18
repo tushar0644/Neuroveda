@@ -3578,16 +3578,27 @@ h6 {
   }
   
   .trust-bar__inner {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px 16px !important;
     text-align: left;
     justify-items: start;
+    padding: 0 16px !important;
   }
-
+  
   .trust-bar__item {
-    font-size: 16px !important;
+    font-size: 13px !important;
+    color: var(--gold) !important;
     width: 100%;
     justify-content: flex-start;
+    align-items: center;
+    gap: 10px !important;
+    font-weight: 600 !important;
+  }
+
+  .trust-bar__icon {
+    width: 28px !important;
+    height: 28px !important;
   }
 
   /* Steps Grid spacing */
